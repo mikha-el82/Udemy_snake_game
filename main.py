@@ -9,7 +9,14 @@ screen.title("Udemy Snake Game")
 screen.tracer(0) # sets turtle animation off
 
 snake = Snake()
-screen.update()
+screen.listen()
+screen.onkey(snake.up, "Up")
+screen.onkey(snake.down, "Down")
+screen.onkey(snake.left, "Left")
+screen.onkey(snake.right, "Right")
+
+# check this one
+# screen.update()
 
 # TODO #1 Remove colors of squares
 # for testing - to differentiate between squares

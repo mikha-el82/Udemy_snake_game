@@ -20,5 +20,16 @@ class Snake:
     def move(self):
         for i in range(len(self.snake_segments) - 1, 0, -1):
             self.snake_segments[i].goto(self.snake_segments[i - 1].pos())
-        #  snake[0].left(30)
         self.snake_segments[0].forward(MOVE_DISTANCE)
+
+    def up(self):
+        self.snake_segments[0].setheading(90)
+
+    def down(self):
+        self.snake_segments[0].setheading(270)
+
+    def left(self):
+        self.snake_segments[0].setheading(180)
+
+    def right(self):
+        self.snake_segments[0].setheading(0)
