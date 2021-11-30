@@ -15,9 +15,6 @@ screen.onkey(snake.down, "Down")
 screen.onkey(snake.left, "Left")
 screen.onkey(snake.right, "Right")
 
-# check this one
-# screen.update()
-
 # TODO #1 Remove colors of squares
 # for testing - to differentiate between squares
 snake.snake_segments[0].color("green")
@@ -28,8 +25,8 @@ screen.update()
 
 # moving of the rest of the snake
 while game_is_on:
-    snake.move()
     time.sleep(1)
+    snake.move()
     screen.update()
     # game_is_on = False
 
