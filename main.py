@@ -18,6 +18,7 @@ for i in range(3):  # initial length of the snake
     snake_segments[i].goto(x=x_pos, y=y_pos)
 screen.update()
 
+
 # TODO #2: Move snake
 # for testing - to differentiate between squares
 snake_segments[0].color("green")
