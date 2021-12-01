@@ -6,7 +6,7 @@ screen = Screen()
 screen.setup(width=600, height=600)
 screen.bgcolor("black")
 screen.title("Udemy Snake Game")
-screen.tracer(0) # sets turtle animation off
+screen.tracer(0)  # sets turtle animation off
 
 snake = Snake()
 screen.listen()
