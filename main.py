@@ -22,8 +22,8 @@ screen.onkey(snake.right, "Right")
 
 # TODO #1 Remove colors of squares
 # for testing - to differentiate between squares
-snake.snake_segments[0].color("green")
-snake.snake_segments[1].color("blue")
+snake.segments[0].color("green")
+snake.segments[1].color("blue")
 
 game_is_on = True
 screen.update()
@@ -37,13 +37,21 @@ while game_is_on:
 
     # detect collision with food
     if snake.head.distance(food) < 10:
-        print("nom nom nom")
         food.refresh()
+        snake.extend_snake()
         score.increase_score()
 
     # detect collision with wall
     if snake.head.xcor() < -280 or snake.head.xcor() > 280 or snake.head.ycor() < -280 or snake.head.ycor() > 280:
         game_is_on = False
         score.game_over()
+
+    # detect collision with tail
+    for segment in snake.segments:
+        if segment == snake.head:
+            pass
+        elif snake.head.distance(segment) < 10:
+            game_is_on = False
+            score.game_over()
 
 screen.exitonclick()
