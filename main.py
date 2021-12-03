@@ -5,7 +5,7 @@ from scoreboard import Scoreboard
 import time
 
 screen = Screen()
-screen.setup(width=600, height=600)  # TODO #1 Include screen width in food to get random location
+screen.setup(width=600, height=600)
 screen.bgcolor("black")
 screen.title("Udemy Snake Game")
 screen.tracer(0)  # sets turtle animation off
@@ -20,18 +20,12 @@ screen.onkey(snake.down, "Down")
 screen.onkey(snake.left, "Left")
 screen.onkey(snake.right, "Right")
 
-# TODO #1 Remove colors of squares
-# for testing - to differentiate between squares
-snake.segments[0].color("green")
-snake.segments[1].color("blue")
-
 game_is_on = True
 screen.update()
 
 # moving of the rest of the snake
 while game_is_on:
-    # TODO: Change the delay according to the actual score
-    time.sleep(0.3)
+    time.sleep(0.2)
     snake.move()
     screen.update()
 

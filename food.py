@@ -10,7 +10,7 @@ class Food(Turtle):
         self.shapesize(stretch_len=0.5, stretch_wid=0.5)
         self.color("green")
         self.speed("fastest")  # without animation
-        rand_x = 20 * random.randint(-14, 14)  # TODO #2 use screen size to get the range
+        rand_x = 20 * random.randint(-14, 14)
         rand_y = 20 * random.randint(-14, 14)
         self.goto(rand_x, rand_y)
 
